@@ -158,7 +158,7 @@ function applyConfig(config) {
 function createConfetti() {
     const colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#bef034ff','#da3434ff'];
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 100; i++) {
         setTimeout(() => {
             const confetti = document.createElement('div');
             confetti.className = 'confetti';
