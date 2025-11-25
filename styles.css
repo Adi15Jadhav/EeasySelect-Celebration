@@ -62,7 +62,7 @@ body {
 }
 .shape-4 {
     top: 25%;
-    right: 20%;
+    right: 15%;
     animation-delay: 3s;
 }
 
@@ -74,7 +74,7 @@ body {
 
 .shape-6 {
     top: 85%;
-    left: 50%;
+    right: 20%;
     animation-delay: 12s;
 }
 
@@ -172,6 +172,12 @@ body {
     background-size: 200% 200%;
 }
 
+.pump-icon {
+    width: 100%;
+    height: 6rem;
+    object-fit: contain;
+}
+
 @keyframes shimmer {
     0% {
         background-position: 0% 50%;
@@ -218,6 +224,13 @@ body {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.features-grid-2 {
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 1.5rem;
     margin-bottom: 3rem;
 }
@@ -345,6 +358,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .features-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
     .ksb-logo {
         max-width: 300px;
     }
@@ -360,4 +377,144 @@ body {
     .anniversary-badge {
         padding: 0.875rem 2rem;
     }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 79, 90, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    margin: 5% auto;
+    padding: 0;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.4s ease;
+    max-height: 85vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.close-modal {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    transform: scale(1.2) rotate(90deg);
+    color: #fbbf24;
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(85vh - 100px);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.product-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.product-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
 }

@@ -40,50 +40,85 @@
             <div class="badge-container">
                 <div class="anniversary-badge">
                     <span class="badge-icon">🎉</span>
-                    <span class="badge-text">MILESTONE RELEASE</span>
+                    <span class="badge-text">A MILESTONE RELEASE</span>
                 </div>
             </div>
 
             <div class="hero-section">
                 <div class="milestone-number">R 25.0</div>
                 <h1 class="main-title" id="main-title">EasySelect Reaches New Heights</h1>
-                <p class="subtitle" id="subtitle">25th Iterations of Engineering Excellence.</p>
+                <p class="subtitle" id="subtitle">25th Iterations of Software Excellence.</p>
             </div>
 
             <div class="description-box">
                 <p class="description-text" id="description">
                     For 25 releases, EasySelect has been the trusted solution for pump, valve, and automation systems
-                    configuration.
+                    configurations.
                     This milestone celebrates our commitment to innovation, precision, and empowering engineers
-                    worldwide to design with confidence.
+                    worldwide to select with confidence.
                 </p>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3 class="feature-title">Pumps</h3>
+                <div class="feature-card" onclick="openModal('pumps')">
+                    <img src="images/water-pump.png" alt="Pump" class="feature-icon pump-icon"
+                        onerror="this.style.display='none';">
+                    <h3 class="feature-title">Pumps & Systems</h3>
                     <p class="feature-description">Advanced pump selection and configuration tool, Optimized curve
-                        selection logic for peak efficiency and precise duty points.</p>
+                        selection logic for peak efficiency and precise duty points</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
+                <div class="feature-card" onclick="openModal('valves')">
+                    <img src="images/valve.png" alt="valves" class="feature-icon pump-icon"
+                        onerror="this.style.display='none';">
                     <h3 class="feature-title">Valves</h3>
-                    <p class="feature-description">Calculated for safety, designed for performance.</p>
+                    <p class="feature-description">Engineered for durability and precision, ensuring safe and efficient
+                        flow control across industrial applications</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3 class="feature-title">Automation</h3>
+                <div class="feature-card" onclick="openModal('automation')">
+                    <img src="images/robotic-arm.png" alt="pump automation" class="feature-icon pump-icon"
+                        onerror="this.style.display='none';">
+                    <h3 class="feature-title">Pump Automation</h3>
                     <p class="feature-description">Bridging mechanical constraints with intelligent actuation and
                         control interfaces</p>
+                </div>
+            </div>
+            <div class="features-grid-2">
+                <div class="feature-card" onclick="openModal('valveAutomation')">
+                    <img src="images/valve_automation.png" alt="valveAutomation" class="feature-icon pump-icon"
+                        onerror="this.style.display='none';">
+                    <h3 class="feature-title">Valve Automation</h3>
+                    <p class="feature-description">Advanced systems for automating valve operations, providing precise
+                        control, position feedback, and integration with process control networks</p>
+                </div>
+                <div class="feature-card" onclick="openModal('valveActuators')">
+                    <img src="images/pneumatic.png" alt="actuators" class="feature-icon pump-icon"
+                        onerror="this.style.display='none';">
+                    <h3 class="feature-title">Valve Actuators</h3>
+                    <p class="feature-description">Reliable actuators for valves, including electric, pneumatic, and
+                        hydraulic options, enabling accurate positioning and efficient flow control in industrial
+                        applications.</p>
                 </div>
             </div>
 
             <div class="cta-section">
                 <button class="cta-button" id="cta-button">
-                    <span id="cta-text">Explore What's New</span>
+                    <span id="cta-text">Explore More</span>
                     <span>→</span>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Products</h2>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="product-grid" id="productList">
+                    <!-- Products dynamical loading -->
+                </div>
             </div>
         </div>
     </div>
