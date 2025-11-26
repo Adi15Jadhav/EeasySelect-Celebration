@@ -169,11 +169,11 @@ body {
 }
 
 .badge-icon {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
 }
 
 .badge-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
     color: #ffffff;
     letter-spacing: 0.05em;
@@ -185,7 +185,7 @@ body {
 }
 
 .milestone-number {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 900;
     background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
     -webkit-background-clip: text;
@@ -210,7 +210,7 @@ body {
 }
 
 .main-title {
-    font-size: 3.5rem;
+    font-size: 3.25rem;
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 1rem;
@@ -218,7 +218,7 @@ body {
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #94a3b8;
     font-weight: 400;
     margin-bottom: 2rem;
