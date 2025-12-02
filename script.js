@@ -9,7 +9,7 @@ const defaultConfig = {
     subtitle: "25th Iterations of Software Excellence.",
     description: "For 25 releases, EasySelect has been the trusted solution for pump, valve, and automation systems configurations.This milestone celebrates our commitment to innovation, precision, and empowering engineers worldwide to select with confidence.",
     cta_button_text: "Explore More",
-    font_family: "Helvetica Neue",
+    font_family: "Arimo",
     font_size: 16
 };
 
@@ -178,14 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //     alert('Welcome to EasySelect 25th Release! 🎉');
     // });
 
-    // Initialize confetti
     createConfetti();
     setInterval(createConfetti, 8000);
 
     applyConfig(defaultConfig);
 });
 
-// Export functions for external use
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         applyConfig,
