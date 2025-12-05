@@ -53,7 +53,7 @@ const productData = {
     supportingTools:[
          { icon: "📛", name: "Nameplate Generator", description: "Tool that helps create precise, customized nameplates with technical specs, model numbers, serial details, and other key information. It enables users to design and print nameplates using laser engraving or adhesive labels" },
          { icon: "📊", name: "MasterData Downloader", description: "It is a replication tool that fetches motor and pricing data from SAP and updates the Easy Select database. It reduces replication time, offers clear error messages, and provides a user-friendly interface with a progress bar and history tracking" },
-         { icon: "⌚", name: "Develivery Time Tool", description: "Delivery Time Tool is used by product managers to update manufacturing time, quantity, and dates in the database. It supports bulk updates through Excel import/export and includes a logging tab to track all changes. With multiple filters, sorting and managing data becomes quick and easy" },
+         { icon: "⌚", name: "Delivery Time Tool", description: "Delivery Time Tool is used by product managers to update manufacturing time, quantity, and dates in the database. It supports bulk updates through Excel import/export and includes a logging tab to track all changes. With multiple filters, sorting and managing data becomes quick and easy" },
          { icon: "🦾", name: "EasySelect Deployment Tool", description: "Tool is a specialized software used for EasySelect Qual deployment, including KIF and database deployment. It is fully automated, enabling seamless and effortless end-to-end deployment" },
          { icon: "ℹ️", name: "EasySelect Database Update Tool", description: "Tool is a utility designed to update and manage EasySelect application data directly in the database. It automates data updates to ensure accuracy, consistency, and faster maintenance" }
     ]
@@ -114,6 +114,12 @@ window.onclick = function(event) {
     }
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeInUp {
@@ -172,12 +178,6 @@ function createConfetti() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // const ctaButton = document.getElementById('cta-button');
-    
-    // ctaButton.addEventListener('click', () => {
-    //     alert('Welcome to EasySelect 25th Release! 🎉');
-    // });
-
     createConfetti();
     setInterval(createConfetti, 8000);
 
