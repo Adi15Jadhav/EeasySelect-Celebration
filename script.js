@@ -14,14 +14,19 @@ const defaultConfig = {
 };
 
 const productData = {
-    pumps: [
-        { icon: "💧", name: "Centrifugal Pumps", description: "Efficient liquid transfer for general applications" },
-        { icon: "⚡", name: "Submersible Pumps", description: "Reliable pumping for deep wells and boreholes" },
-        { icon: "🔄", name: "Multistage Pumps", description: "High-pressure delivery for demanding systems" },
-        { icon: "🌊", name: "Wastewater Pumps", description: "Robust design for sewage and sludge handling" },
-        { icon: "🏭", name: "Process Pumps", description: "Specialized solutions for industrial processes" },
-        { icon: "🔥", name: "Hot Water Pumps", description: "Safe circulation for high-temperature fluids" },
-        { icon: "⚙️", name: "Booster systems", description: "Pressure enhancement for consistent flow" }
+    pumps: [   
+    { icon: "💧", name: "Baseplate Pumps", description: "Durable pumps mounted on a baseplate for heavy-duty industrial applications" },
+    { icon: "🔐", name: "Closed-Coupled Pumps", description: "Compact design with motor and pump directly connected for space-saving installations" },
+    { icon: "➡️", name: "Inline Pumps", description: "Ideal for pipeline systems, ensuring smooth flow without altering pipe layout" },
+    { icon: "🚢", name: "Submersible Pumps", description: "Reliable underwater operation for wells, boreholes, and drainage systems" },
+    { icon: "⚡", name: "Split Case Pumps", description: "High-capacity pumps with easy maintenance for large-scale water transfer" },
+    { icon: "🔄", name: "Multistage Pumps", description: "Delivers high pressure through multiple impellers for demanding applications" },
+    { icon: "🌊", name: "Wastewater Pumps", description: "Robust design for handling sewage, sludge, and contaminated liquids" },
+    { icon: "🏭", name: "Sealless Pumps", description: "Leak-proof pumping solutions for hazardous or sensitive industrial fluids" },
+    { icon: "🔥", name: "Hot Water Pumps", description: "Engineered for safe circulation of high-temperature liquids in heating systems" },
+    { icon: "🎚️", name: "Vertical Pumps", description: "Space-efficient pumps for deep sumps and high-capacity vertical installations" },
+    { icon: "➖", name: "Pipe Shaft Pumps", description: "Ideal for pumping large volumes from reservoirs or cooling towers" },
+    { icon: "⚙️", name: "Booster Systems", description: "Enhances water pressure for consistent supply in commercial and industrial setups" }
     ],
     valves: [
         { icon: "🎚️", name: "Control Valves", description: "Precision flow regulation for process control" },
